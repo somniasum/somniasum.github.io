@@ -53,6 +53,7 @@ nav ul{
 
 nav ul li{
     display: inline-block;
+    position: left;
 }
 
 nav ul li:not(:first-child){
