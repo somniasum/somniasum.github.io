@@ -1,12 +1,76 @@
 *{
-    margin: 0;
-    padding: 0;
+    
     box-sizing: border-box;
 
 }
 
-canvas{
-    height: 100%;
+html {
+    margin: 0;
+    padding: 0;
     width: 100%;
+    height: 100vh;
 
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    background: black;
+    background-position: center;
+    background-size: cover;
+
+}
+
+nav{
+    padding: 8px;
+
+}
+
+.logo {
+    float: left;
+    padding: 8px;
+    margin-left: 16px;
+    margin-top: 8px;
+
+}
+
+.logo a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+nav ul{
+    float: right;
+
+}
+
+nav ul li{
+    display: inline-block;
+    float: left;
+}
+
+nav ul li:not(:first-child){
+    margin-left: 48px;
+}
+
+nav ul li:last-child {
+    margin-left: 24px;
+}
+
+nav ul li a {
+    display: inline-block;
+    outline: none;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1.2px;
+    font-weight: 600;
 }
