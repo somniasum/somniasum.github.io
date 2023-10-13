@@ -143,30 +143,60 @@ footer{
     color: hwb(0 86% 14%);
   }
 
-.navbar a {
+.navbar * {
+    box-sizing: border-box;
+    transition: all .35s ease;
+  }
+  
+  .navbar li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: .5em 1em;
+    padding: 0;
+  }
+  
+  .navbar a {
+    padding: .5em .8em;
+    color: rgb(255, 255, 255);
     position: relative;
-    font-size: 18px;
-    color: #fff;
-    font-weight: 400;
     text-decoration: none;
-    margin-left: 40px;
-}
-
-.navbar a::before{
+    font-size: 20px;
+  }
+  
+  .navbar a::before,
+  .navbar a::after {
     content: '';
+    height: 14px;
+    width: 14px;
     position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
+  }
+  
+  .navbar a::before {
+    content: '';
+    right: 0;
     top: 0;
+    border-top: 3px solid hsl(0, 0%, 100%);
+    border-right: 3px solid hsl(0, 0%, 100%);
+    transform: translate(-100%, 50%);
+  }
+  
+  .navbar a:after {
+    content: '';
     left: 0;
-    width: 0%;
-    height: 2px;
-    background: #fff;
-    transition: .5s;
-
-    
-}
-
-.navbar a:hover::before{
-    width: 100%;
-    font-weight: normal;
-
-}
+    bottom: 0;
+    border-bottom: 3px solid hsl(0, 0%, 100%);
+    border-left: 3px solid rgb(192, 192, 192);
+    transform: translate(100%, -50%)
+  }
+  
+  .navbar a:hover:before,
+  .navbar a:hover:after{
+    transform: translate(0,0);
+    opacity: 1;
+  }
+  
+  .navbar a:hover {
+    color: hwb(0 86% 14%);
+  }
