@@ -49,6 +49,7 @@ navbar a::before{
     top: 0;
     bottom: 0;
     left: 0;
+    font-family: 'Playfair Display', serif;
 }
 
 navbar a::after{
