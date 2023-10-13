@@ -34,3 +34,26 @@ body{
     text-decoration: none;
     font-weight: 600;
 }
+
+navbar a {
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+navbar a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+navbar a::after{
+    color: white;
+    font-weight: 400;
+    position: flex;
+    text-decoration: none;
+}
