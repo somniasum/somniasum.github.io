@@ -47,17 +47,17 @@ body{
 .navbar a::before{
     content: "";
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 0;
-    width: 100%;
+    width: 0%;
     height: 2px;
     background: #fff;
-    transition: .3s;
+    transition: .5s;
 
     
 }
 
-.navbar a::hover::before{
+.navbar a:hover::before{
     width: 100%;
 
 }
