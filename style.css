@@ -3,31 +3,36 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Playfair Display', serif;
+    
 }
 
 body{
-    min-height: 100vh;
-    background: none;
-    background-color: black;
-    background-size: cover;
-    background-position: center;
+    font-family: 'Playfair Display', serif;
 }
 
-.header {
+header, footer {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     padding: 20px 100px;
-    background: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+    width: 100%;
+    color: white;
+    background-color: black;
+    
 }
 
+header{
+    height: 10vh;
+}
+
+footer{
+    height: 15vh;
+    bottom: 0;
+}
+
+footer h2{
+    position: absolute;
+    width: 100%;
+}
 .logo {
     font-size: 32px;
     color: white;
