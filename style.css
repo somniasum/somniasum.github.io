@@ -89,6 +89,16 @@ main{
     text-decoration: none;
     font-weight: 600;
 }
+<<<<<<< HEAD
+
+.navbar a{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    
+}
+=======
 
 .logo * {
     box-sizing: border-box;
@@ -213,7 +223,8 @@ main{
     opacity: 0;
   }
   .console-container{
-    font-size: 18px;
+    font-size: 3em;
+    justify-content: center;
     text-align: left;
     height: 50px;
     width: 100%;
@@ -233,3 +244,5 @@ main{
     top: -0.14em;
     left: 10px;
   }
+
+>>>>>>> 832b8542bc53cf37521f207ac8aef5b39b436300
