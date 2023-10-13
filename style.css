@@ -38,9 +38,42 @@ footer{
     bottom: 0;
 }
 
-footer h2{
-    position: absolute;
+.footerContainer{
     width: 100%;
+    padding: 20px 30px 20px;
+
+}
+
+.socials{
+    display: flex;
+    justify-content: center;
+}
+
+.socials a{
+    text-decoration: none;
+    padding: 18px;
+    background-color: black;
+    margin: 10px;
+    border-radius: 25%;
+    display: flex;
+    justify-content: center;
+}
+
+.socials a i{
+    font-size: 1em;
+    color: white;
+    opacity: 0.9;
+}
+
+/*Hover effects for the footer*/
+.socials a:hover{
+    background-color: white;
+    transition: 0.5s;
+}
+
+.socials a:hover i{
+    color: black;
+    transition: 0.5s;
 }
 .logo {
     font-size: 32px;
