@@ -35,7 +35,7 @@ body{
     font-weight: 600;
 }
 
-navbar a {
+.navbar a {
     font-size: 18px;
     color: white;
     font-weight: 400;
@@ -43,7 +43,7 @@ navbar a {
     margin-left: 40px;
 }
 
-navbar a::before{
+.navbar a::before{
     content: "";
     position: absolute;
     top: 100%;
@@ -57,7 +57,7 @@ navbar a::before{
     
 }
 
-navbar a::hover::before{
+.navbar a::hover::before{
     width: 100%;
 
 }
