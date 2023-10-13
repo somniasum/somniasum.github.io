@@ -213,9 +213,9 @@ main{
     opacity: 0;
   }
   .console-container{
-    font-size: 4em;
-    text-align: center;
-    height: 200px;
+    font-size: 18px;
+    text-align: left;
+    height: 50px;
     width: 100%;
     display: flex;
     position: absolute;
