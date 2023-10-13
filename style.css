@@ -75,12 +75,73 @@ footer{
     color: black;
     transition: 0.5s;
 }
+
+/*for the main words*/
+
 .logo {
     font-size: 32px;
     color: white;
     text-decoration: none;
     font-weight: 600;
 }
+
+.logo * {
+    box-sizing: border-box;
+    transition: all .35s ease;
+  }
+  
+  .logo li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: .5em 1em;
+    padding: 0;
+  }
+  
+  .logo a {
+    padding: .5em .8em;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .logo a::before,
+  .logo a::after {
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
+  }
+  
+  .logo a::before {
+    content: '';
+    right: 0;
+    top: 0;
+    border-top: 3px solid hsl(0, 0%, 100%);
+    border-right: 3px solid hsl(0, 0%, 100%);
+    transform: translate(-100%, 50%);
+  }
+  
+  .logo a:after {
+    content: '';
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid hsl(0, 0%, 100%);
+    border-left: 3px solid rgb(192, 192, 192);
+    transform: translate(100%, -50%)
+  }
+  
+  .logo a:hover:before,
+  .logo a:hover:after{
+    transform: translate(0,0);
+    opacity: 1;
+  }
+  
+  .logo a:hover {
+    color: hwb(0 86% 14%);
+  }
 
 .navbar a {
     position: relative;
