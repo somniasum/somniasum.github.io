@@ -46,15 +46,19 @@ navbar a {
 navbar a::before{
     content: "";
     position: absolute;
-    top: 0;
+    top: 100%;
     bottom: 0;
     left: 0;
-    font-family: 'Playfair Display', serif;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transition: .3s;
+
+    
 }
 
-navbar a::after{
-    color: white;
-    font-weight: 400;
-    position: flex;
-    text-decoration: none;
+navbar a::hover::before{
+    width: 100%;
+
 }
+
