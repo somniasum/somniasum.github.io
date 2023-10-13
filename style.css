@@ -11,7 +11,7 @@ body{
     font-family: 'Playfair Display', serif;
 }
 
-header, footer {
+header, footer, main {
     position: fixed;
     width: 100%;
     padding: 20px 100px;
@@ -36,6 +36,11 @@ header{
 footer{
     height: 15vh;
     bottom: 0;
+}
+
+main{
+    height: 30vh;
+    bottom: 30%;
 }
 
 .footerContainer{
@@ -199,4 +204,32 @@ footer{
   
   .navbar a:hover {
     color: hwb(0 86% 14%);
+  }
+
+
+  /* Console text */
+
+  .hidden {
+    opacity: 0;
+  }
+  .console-container{
+    font-size: 4em;
+    text-align: center;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    color: white;
+    top: 0;
+    bottom: 50;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .console-underscore{
+    display: inline-block;
+    position: relative;
+    top: -0.14em;
+    left: 10px;
   }
