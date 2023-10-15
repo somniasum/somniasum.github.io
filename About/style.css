@@ -253,32 +253,3 @@ p {
 }
 
 
-.wrapper-1, .wrapper-2, .wrapper-3{
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.wrapper-1{
-  align-items: center;
-}
-
-.wrapper-2{
-  align-items: right;
-}
-
-.wrapper-3{
-  align-items: left;
-}
-
-img{
-  display: block;
-  margin: auto;
-  width: 100%;
-}
-
-.image{
-  position: relative;
-  width: 500px;
-}
