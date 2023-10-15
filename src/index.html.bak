@@ -18,12 +18,14 @@
       </ul>
 
       <nav class="navbar">
-        <li><a href="#">Home</a></li>
+        <li><a href="#" class="more">Home</a>
+		<audio src="Music/page-flip.mp3" class="enter"></audio>
+	</li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
       </nav>
     </header>
-
+    <script src="Music/sound-effect.js"></script>
     <main>
       <section>
         <div class="console-container">
@@ -42,7 +44,8 @@
       </div>
       </div>
     </footer>
-		
+	
 	</body>
+	<audio src="Music/page-flip.mp3"></audio>
   <script src="console.js"></script>
 </html>

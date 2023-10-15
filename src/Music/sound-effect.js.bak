@@ -1,0 +1,5 @@
+var flip_sound= $("#flip")[0];
+$(".navbar")
+.mouseenter(function(){
+		flip_sound.play();
+		});
