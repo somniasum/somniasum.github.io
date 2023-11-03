@@ -26,25 +26,25 @@
     
     <main>
       <section>
-        <form action="">
+        <form action="https://formsubmit.co/el/hakucu" method="POST" />
+          
           <div class="title">
             <h2>Contact</h2>
           </div>
           <div class="half">
             <label for="name">Name</label>
-            <input type="text" id="name">
+            <input type="text" id="name" required>
           </div>
           <div class="item">
             <label for="email">Email</label>
-            <input type="text" id="email">
+            <input type="email" id="email" required>
           </div>
           <div class="full">
             <label for="message">Message</label>
-            <textarea name="" id="message" ></textarea>
+            <textarea name="" id="message" required></textarea>
           </div>
-          <div class="action">
-            <input type="submit" value="send">
-          </div>
+          <button type="submit" class="action">submit
+          </button>
         </form>
       </section>
     </main>
