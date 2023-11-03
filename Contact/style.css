@@ -241,6 +241,10 @@ form .title h2{
   margin-bottom: 32px;
 }
 
+form  .title .half .full .item {
+  color: white;
+}
+
 form .half{
   display: flex;
   justify-content: space-between;
