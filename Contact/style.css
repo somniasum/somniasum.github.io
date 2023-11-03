@@ -312,7 +312,6 @@ form .action input{
   margin-right: 10px;
 }
 
-form .action input [type="]
 
 form .half .item input:focus , form .full textarea:focus{
   background: rgba(255, 255, 255, 0.75);
