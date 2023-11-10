@@ -89,7 +89,6 @@ main{
     text-decoration: none;
     font-weight: 600;
 }
-<<<<<<< HEAD
 
 .navbar a{
     font-size: 20px;
@@ -98,7 +97,6 @@ main{
     text-decoration: none;
     
 }
-=======
 
 .logo * {
     box-sizing: border-box;
@@ -270,22 +268,37 @@ p {
 }
 
 .text-container {
-  padding: 0;
-  display: flex;
-  overflow-x: auto;
+  margin: 0 auto;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1rem;
+  height: calc(180px + 1rem);
+  padding: 1rem;
+  max-width: 480px;
+  overflow-y: auto;
+  overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
-  width: 100%;
-  touch-action: pan-x;
 }
 
+.text-container > section{
+  scroll-snap-align: center;
+}
+
+.text-container h2 p{
+  width: 180px;
+  max-width: none;
+  object-fit: contain;
+  border-radius: 1rem;
+}
+/*
 section {
-  flex: 0 0 auto; /* Each section should take up the full width */
+  flex: 0 0 auto; 
   scroll-snap-align: start;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-}
+}*/
 
 h2{
   margin-bottom: 10px;
@@ -294,3 +307,8 @@ h2{
 p{
   max-width: 400px;
 }
+/*
+section:nth-child(odd){
+  background-color: transparent;
+  color: white;
+}*/
