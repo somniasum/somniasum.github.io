@@ -39,8 +39,7 @@ footer{
 }
 
 main{
-    height: 75vh;
-    bottom: 15%;
+    min-height: 100%;
 }
 
 .footerContainer{

@@ -39,8 +39,7 @@ footer{
 }
 
 main{
-    height: 75vh;
-    bottom: 15%;
+    min-height: 100%;
 }
 
 .footerContainer{
@@ -89,7 +88,7 @@ main{
     text-decoration: none;
     font-weight: 600;
 }
-<<<<<<< HEAD
+
 
 .navbar a{
     font-size: 20px;
@@ -98,7 +97,6 @@ main{
     text-decoration: none;
     
 }
-=======
 
 .logo * {
     box-sizing: border-box;
@@ -245,4 +243,4 @@ main{
     left: 10px;
   }
 
->>>>>>> 832b8542bc53cf37521f207ac8aef5b39b436300
+
