@@ -1,5 +1,5 @@
 // function([string1, string2],target id,[color1,color2])    
-consoleText(['sudo su', 'netstat -antp', 'tail -n 50 /var/log/syslog'], 'text',['white','white','white']);
+consoleText(['coming soon', 'coming soon', 'coming soon'], 'text',['white','white','white']);
 
 function consoleText(words, id, colors) {
   if (colors === undefined) colors = ['#fff'];
