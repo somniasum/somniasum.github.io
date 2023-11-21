@@ -39,7 +39,16 @@ footer{
 }
 
 main{
-    min-height: 100vh;
+  height: 100%;
+}
+
+.notice{
+  display: flex;
+  min-height: auto;
+  color: white;
+  justify-content: center;
+  max-height: fit-content;
+  align-items: right;
 }
 
 .footerContainer{
@@ -215,7 +224,7 @@ main{
   }
 
 
-  /* Console text */
+  /* Console text 
 
   .hidden {
     opacity: 0;
@@ -224,7 +233,7 @@ main{
     font-size: 3em;
     justify-content: center;
     text-align: left;
-    height: 50px;
+    height: 75px;
     width: 100%;
     display: flex;
     position: absolute;
@@ -242,5 +251,5 @@ main{
     top: -0.14em;
     left: 10px;
   }
-
+*/
 
