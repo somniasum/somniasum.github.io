@@ -9,6 +9,7 @@
 
 body{
     font-family: 'Playfair Display', serif;
+    overflow: hidden;
 }
 
 header, footer {
@@ -44,7 +45,6 @@ main{
   width: 100%;
   color: white;
   background-color: black;
-  overflow-x: hidden;
   top: 20px;
 }
 
@@ -55,8 +55,8 @@ main{
   justify-content: center;
   align-items: right;
   position: absolute;
-  top: 300px;
-  left: 280px;
+  top: 50%;
+  left: 50%;
   font-size: 2em;
 }
 
@@ -252,7 +252,7 @@ main{
     left: 0;
     right: 0;
     margin: auto;
-  }
+  }*/
 
   .console-underscore{
     display: inline-block;
@@ -260,5 +260,5 @@ main{
     top: -0.14em;
     left: 10px;
   }
-*/
+
 
