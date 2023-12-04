@@ -29,8 +29,6 @@ header{
     z-index: 100;
     justify-content: space-between;
     width: 100%;
-    top: 0;
-    left: 0;
 }
 
 footer{
@@ -71,12 +69,12 @@ main{
 
 /*Hover effects for the footer*/
 .socials a:hover{
-    background-color: white;
+    background-color: #0f0f0f;
     transition: 0.5s;
 }
 
 .socials a:hover i{
-    color: black;
+    color: white;
     transition: 0.5s;
 }
 
@@ -117,107 +115,14 @@ main{
     font-size: 20px;
   }
   
-  .logo a::before,
-  .logo a::after {
-    content: '';
-    height: 14px;
-    width: 14px;
-    position: absolute;
-    transition: all .35s ease;
-    opacity: 0;
-  }
   
-  .logo a::before {
-    content: '';
-    right: 0;
-    top: 0;
-    border-top: 3px solid hsl(0, 0%, 100%);
-    border-right: 3px solid hsl(0, 0%, 100%);
-    transform: translate(-100%, 50%);
-  }
-  
-  .logo a:after {
-    content: '';
-    left: 0;
-    bottom: 0;
-    border-bottom: 3px solid hsl(0, 0%, 100%);
-    border-left: 3px solid rgb(192, 192, 192);
-    transform: translate(100%, -50%)
-  }
-  
-  .logo a:hover:before,
-  .logo a:hover:after{
-    transform: translate(0,0);
-    opacity: 1;
-  }
-  
-  .logo a:hover {
-    color: hwb(0 86% 14%);
-  }
-
-.navbar * {
-    box-sizing: border-box;
-    transition: all .35s ease;
-  }
-  
-  .navbar li {
-    display: inline-block;
-    list-style: outside none none;
-    margin: .5em 1em;
-    padding: 0;
-  }
-  
-  .navbar a {
-    padding: .5em .8em;
-    color: rgb(255, 255, 255);
-    position: relative;
-    text-decoration: none;
-    font-size: 20px;
-  }
-  
-  .navbar a::before,
-  .navbar a::after {
-    content: '';
-    height: 14px;
-    width: 14px;
-    position: absolute;
-    transition: all .35s ease;
-    opacity: 0;
-  }
-  
-  .navbar a::before {
-    content: '';
-    right: 0;
-    top: 0;
-    border-top: 3px solid hsl(0, 0%, 100%);
-    border-right: 3px solid hsl(0, 0%, 100%);
-    transform: translate(-100%, 50%);
-  }
-  
-  .navbar a:after {
-    content: '';
-    left: 0;
-    bottom: 0;
-    border-bottom: 3px solid hsl(0, 0%, 100%);
-    border-left: 3px solid rgb(192, 192, 192);
-    transform: translate(100%, -50%)
-  }
-  
-  .navbar a:hover:before,
-  .navbar a:hover:after{
-    transform: translate(0,0);
-    opacity: 1;
-  }
-  
-  .navbar a:hover {
-    color: hwb(0 86% 14%);
-  }
 
 /* The main text */
 
   .title-container {
 	  min-height: 5vh;
     position: fixed;
+    top: 25%;
   }
 
   h1 {
@@ -278,4 +183,28 @@ section {
   text-align: center;
 }
 
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  line-height: 100px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
 
+.box:hover {
+  background-color: #0f0f0f;
+}
+
+.box-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  width: 100%;
+
+}
