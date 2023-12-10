@@ -31,12 +31,61 @@ header{
     width: 100%;
     top: 0;
     left: 0;
+
+}
+
+header, navbar{
+  font-size: 2em;
 }
 
 footer{
     height: 20vh;
     bottom: 0;
 }
+
+
+/*Top part of the page */
+
+.logo {
+  font-size: 32px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
+.navbar a{
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  
+}
+
+.logo a {
+  padding: .5em .8em;
+  color: rgb(255, 255, 255);
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+
+.logo, .navbar * {
+box-sizing: border-box;
+transition: all .35s ease;
+}
+
+.logo, .navbar li {
+display: inline-block;
+list-style: outside none none;
+margin: .5em 1em;
+padding: 0;
+}
+
+
+
+/* middile page */
 
 main{
   height: 100vh;
@@ -62,205 +111,40 @@ main{
   font-size: 2em;
 }
 
+
+
+
+/*Bottom of the page*/
+
 .footerContainer{
-    width: 100%;
-    padding: 20px 30px 20px;
+  width: 100%;
+  padding: 20px 30px 20px;
 
 }
 
 .socials{
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .socials a{
-    text-decoration: none;
-    padding: 18px;
-    background-color: black;
-    margin: 10px;
-    border-radius: 25%;
-    display: flex;
-    justify-content: center;
+  text-decoration: none;
+  padding: 18px;
+  background-color: black;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .socials a i{
-    font-size: 1em;
-    color: white;
-    opacity: 0.9;
-}
-
-/*Hover effects for the footer*/
-.socials a:hover{
-    background-color: white;
-    transition: 0.5s;
-}
-
-.socials a:hover i{
-    color: black;
-    transition: 0.5s;
-}
-
-/*for the main words*/
-
-.logo {
-    font-size: 32px;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
+  font-size: 1.6em;
+  color: white;
+  opacity: 1;
 }
 
 
-.navbar a{
-    font-size: 20px;
-    color: #fff;
-    font-weight: 500;
-    text-decoration: none;
-    
-}
-
-.logo * {
-    box-sizing: border-box;
-    transition: all .35s ease;
-  }
-  
-  .logo li {
-    display: inline-block;
-    list-style: outside none none;
-    margin: .5em 1em;
-    padding: 0;
-  }
-  
-  .logo a {
-    padding: .5em .8em;
-    color: rgb(255, 255, 255);
-    position: relative;
-    text-decoration: none;
-    font-size: 20px;
-  }
-  
-  .logo a::before,
-  .logo a::after {
-    content: '';
-    height: 14px;
-    width: 14px;
-    position: absolute;
-    transition: all .35s ease;
-    opacity: 0;
-  }
-  
-  .logo a::before {
-    content: '';
-    right: 0;
-    top: 0;
-    border-top: 3px solid hsl(0, 0%, 100%);
-    border-right: 3px solid hsl(0, 0%, 100%);
-    transform: translate(-100%, 50%);
-  }
-  
-  .logo a:after {
-    content: '';
-    left: 0;
-    bottom: 0;
-    border-bottom: 3px solid hsl(0, 0%, 100%);
-    border-left: 3px solid rgb(192, 192, 192);
-    transform: translate(100%, -50%)
-  }
-  
-  .logo a:hover:before,
-  .logo a:hover:after{
-    transform: translate(0,0);
-    opacity: 1;
-  }
-  
-  .logo a:hover {
-    color: hwb(0 86% 14%);
-  }
-
-.navbar * {
-    box-sizing: border-box;
-    transition: all .35s ease;
-  }
-  
-  .navbar li {
-    display: inline-block;
-    list-style: outside none none;
-    margin: .5em 1em;
-    padding: 0;
-  }
-  
-  .navbar a {
-    padding: .5em .8em;
-    color: rgb(255, 255, 255);
-    position: relative;
-    text-decoration: none;
-    font-size: 20px;
-  }
-  
-  .navbar a::before,
-  .navbar a::after {
-    content: '';
-    height: 14px;
-    width: 14px;
-    position: absolute;
-    transition: all .35s ease;
-    opacity: 0;
-  }
-  
-  .navbar a::before {
-    content: '';
-    right: 0;
-    top: 0;
-    border-top: 3px solid hsl(0, 0%, 100%);
-    border-right: 3px solid hsl(0, 0%, 100%);
-    transform: translate(-100%, 50%);
-  }
-  
-  .navbar a:after {
-    content: '';
-    left: 0;
-    bottom: 0;
-    border-bottom: 3px solid hsl(0, 0%, 100%);
-    border-left: 3px solid rgb(192, 192, 192);
-    transform: translate(100%, -50%)
-  }
-  
-  .navbar a:hover:before,
-  .navbar a:hover:after{
-    transform: translate(0,0);
-    opacity: 1;
-  }
-  
-  .navbar a:hover {
-    color: hwb(0 86% 14%);
-  }
 
 
-  /* Console text 
 
-  .hidden {
-    opacity: 0;
-  }
-  .console-container{
-    font-size: 3em;
-    justify-content: center;
-    text-align: left;
-    height: 75px;
-    width: 100%;
-    display: flex;
-    position: absolute;
-    color: white;
-    top: 0;
-    bottom: 50;
-    left: 0;
-    right: 0;
-    margin: auto;
-  }*/
-
-  .console-underscore{
-    display: inline-block;
-    position: relative;
-    top: -0.14em;
-    left: 10px;
-  }
 
 
