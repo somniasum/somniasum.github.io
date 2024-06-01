@@ -1,8 +1,8 @@
 // function([string1, string2],target id,[color1,color2])    
-consoleText(['coming soon', 'coming soon', 'coming soon'], 'text',['white','white','white']);
+consoleText(['∗', '127.0.0.1: page', '∗', 'aac 44100Hz', '∗', '1 / 137', '∗', "somniasum"], 'text',['white','white','white']);
 
 function consoleText(words, id, colors) {
-  if (colors === undefined) colors = ['#fff'];
+  if (colors === undefined) colors = ['#ffffff'];
   var visible = true;
   var con = document.getElementById('console');
   var letterCount = 1;
@@ -37,15 +37,4 @@ function consoleText(words, id, colors) {
       letterCount += x;
     }
   }, 120)
-  window.setInterval(function() {
-    if (visible === true) {
-      con.className = 'console-underscore hidden'
-      visible = false;
-
-    } else {
-      con.className = 'console-underscore'
-
-      visible = true;
-    }
-  }, 400)
 }

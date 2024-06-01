@@ -55,16 +55,16 @@ main{
     text-decoration: none;
     padding: 18px;
     background-color: black;
+    font-size: 4em;
     margin: 10px;
-    border-radius: 25%;
     display: flex;
     justify-content: center;
 }
 
 .socials a i{
-    font-size: 1em;
+    font-size: 32px;
     color: white;
-    opacity: 0.9;
+    opacity: 1;
 }
 
 /*Hover effects for the footer*/
@@ -89,7 +89,7 @@ main{
 
 .navbar a{
     font-size: 20px;
-    color: #fff;
+    color: white;
     font-weight: 500;
     text-decoration: none;
     
@@ -127,7 +127,7 @@ main{
 
   h1 {
   font-size: 3em;
-  text-transform: uppercase;
+  text-transform: lowercase;
   letter-spacing: -3px;
   transition: 700ms ease;
   font-variation-settings: "wght" 311;
@@ -205,6 +205,30 @@ section {
   align-items: center;
   height: 100vh;
   background-color: black;
-  width: 100%;
+  width: 100%; 
 
 }
+/*
+.paragraph-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 50vh;
+	box-sizing: border-box;
+	width: 900px;
+
+
+
+	
+}
+*/
+.paragraph-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  font-size: 20px;
+  height: 50vh;
+}
+

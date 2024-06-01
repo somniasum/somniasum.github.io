@@ -12,7 +12,7 @@ body{
     overflow: hidden;
 }
 
-header, footer {
+header{
     position: fixed;
     width: 100%;
     padding: 20px 100px;
@@ -35,36 +35,31 @@ header{
 }
 
 header, navbar{
-  font-size: 2em;
-}
-
-footer{
-    height: 20vh;
-    bottom: 0;
+  font-size: 4em;
 }
 
 
 /*Top part of the page */
+.logo, .navbar{
+	font-weight: 600;
 
+}
 .logo {
   font-size: 32px;
   color: white;
   text-decoration: none;
-  font-weight: 600;
 }
 
 
 .navbar a{
   font-size: 20px;
-  color: #fff;
-  font-weight: 500;
+  color: white;
   text-decoration: none;
-  
 }
 
 .logo a {
   padding: .5em .8em;
-  color: rgb(255, 255, 255);
+  color: white;
   position: relative;
   text-decoration: none;
   font-size: 20px;
@@ -99,52 +94,14 @@ main{
 
 .console-container{
   display: flex;
-  min-height: auto;
+  width: auto; 
   color: white;
   justify-content: center;
-  align-items: right;
+  align-items: center;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 25%;
   bottom: 50%;
-  right: 50%;
+  right: 25%;
   font-size: 2em;
 }
-
-
-
-
-/*Bottom of the page*/
-
-.footerContainer{
-  width: 100%;
-  padding: 20px 30px 20px;
-
-}
-
-.socials{
-  display: flex;
-  justify-content: center;
-}
-
-.socials a{
-  text-decoration: none;
-  padding: 18px;
-  background-color: black;
-  margin: 10px;
-  display: flex;
-  justify-content: center;
-}
-
-.socials a i{
-  font-size: 1.6em;
-  color: white;
-  opacity: 1;
-}
-
-
-
-
-
-
-
