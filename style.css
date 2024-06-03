@@ -8,7 +8,6 @@
 }
 
 body{
-    font-family: 'Playfair Display', serif;
     overflow: hidden;
 }
 
@@ -36,6 +35,7 @@ header{
 
 header, navbar{
   font-size: 4em;
+  font-family: 'Playfair Display', serif;
 }
 
 
@@ -90,6 +90,10 @@ main{
   color: white;
   background-color: black;
   top: 20px;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+
 }
 
 .console-container{

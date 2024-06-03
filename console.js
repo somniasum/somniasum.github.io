@@ -1,5 +1,5 @@
 // function([string1, string2],target id,[color1,color2])    
-consoleText(['∗', '127.0.0.1: page', '∗', 'aac 44100Hz', '∗', '1 / 137', '∗', "somniasum"], 'text',['white','white','white']);
+consoleText(['127.0.0.1: page','.', './', './∗', "somniasum"], 'text',['white','white','white']);
 
 function consoleText(words, id, colors) {
   if (colors === undefined) colors = ['#ffffff'];
