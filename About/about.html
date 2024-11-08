@@ -28,8 +28,13 @@
 
         <div class="title-container">
           <h1 contenteditable id="mainTitle">* whoami </h1>
+	  <script>
+		  const currentYear =  new Date().getFullYear();
+		  const age = currentYear - 2001;
+		  document.getElementById("mainTitle").textContent = age;
+	  </script>
 	  <p class="paragraph-container">
-	  The name is Boinehelo Lebeta, just call me 'zhad'. I keep a tight social circle and at most I'm a very private person. [bluh bluh bluh]. All in all just a chilled NERD with immaculate music taste.   
+	  The name is 'zhad'. I keep a tight social circle and at most I'm a very private person. All in all, just a guy.
 	  </p>
         </div>
 
@@ -41,8 +46,10 @@
       <div class="footerContainer">
         <div class="socials">
           <a href="https://instagram.com/somniasum"><i class="fa-brands fa-instagram"></i></a>
-  <a href="https://x.com/somniasum"><i class="fa-brands fa-x-twitter"></i></a>
-  <a href="https://t.me/somniasum"><i class="fa-brands fa-telegram"></i></a>
+  	  <a href="https://x.com/somniasum"><i class="fa-brands fa-x-twitter"></i></a>
+  	  <a href="https://t.me/somniasum"><i class="fa-brands fa-telegram"></i></a>
+	  <a href="https://open.spotify.com/user/zpxocnh2tlhipbwd45mu2si7n"><i class="fa-brands fa-spotify"></i></a>
+
 	</div>
       </div>
     </footer>
