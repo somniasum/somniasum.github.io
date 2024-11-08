@@ -123,7 +123,7 @@ main{
 /* The main text */
 
   .title-container {
-	  min-height: 5vh;
+    min-height: 5vh;
     position: fixed;
     top: 25%;
   }
@@ -138,6 +138,8 @@ main{
   color: white;
   outline: none;
   text-align: center;
+  font-family: "IBM Plex Mono", monospace;
+
 }
 
 h1:hover {
