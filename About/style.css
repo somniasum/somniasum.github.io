@@ -26,12 +26,8 @@ main {
 
 header {
     height: 10vh;
-    position: fixed;
     display: flex;
-    align-items: center;
     z-index: 100;
-    justify-content: space-between;
-    width: 100%;
 }
 
 footer {
@@ -120,6 +116,11 @@ h1 {
     text-align: center;
 }
 
+h1 a {
+    text-decoration: none;
+    color: white;
+}
+
 p {
     font-size: 1.2em;
     line-height: 150%;
@@ -140,7 +141,10 @@ p {
     justify-content: center;
     align-items: center;
 }
-
+.content a {
+    text-decoration: none;
+    color: white;
+}
 /*this will be the summary boxes*/
 
 .about-section {
@@ -165,4 +169,9 @@ section {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
     font-style: normal;
+}
+
+.paragraph-container a {
+    text-decoration: none;
+    color: white;
 }
