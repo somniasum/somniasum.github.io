@@ -2,59 +2,115 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta https-equiv="X-UA-Compatible" content="IE-edge" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
-            name="viewpoint"
-            content="width=device-width, initial-scale=1.0"
+            name="description"
+            content="zhad — binary wizard, materialist antitheist, and artifex of the physical sciences"
         />
+        <meta name="author" content="somniasum" />
         <title>somniasum</title>
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="about.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     </head>
-
     <body>
-        <header class="header">
-            <ul class="logo">
-                <li><a href="../index.html"></a></li>
-            </ul>
+        <div class="grain-overlay"></div>
 
-            <nav class="navbar"></nav>
-        </header>
-        <main>
-            <section class="about-section">
-                <div class="title-container">
-                    <h1 id="mainTitle"><a href="../index.html">de.</a></h1>
-                    <p class="paragraph-container">
-                        zhad is a binary wizard, cryptic by rapport, materialist
-                        antitheist and an artifex of the physical sciences. he
-                        coined the portmanteau pseudonym 'somniasum', roughly
-                        translated to 'i am dreams'. the art speaks for itself.
+        <div class="content-container">
+            <main role="main">
+                <article class="about-wrapper">
+                    <div class="about-content">
+                        <p class="bio-text">
+                            zhad is a binary wizard, cryptic by rapport,
+                            materialist antitheist and an artifex of the
+                            physical sciences. he coined the portmanteau
+                            pseudonym 'somnia-sum', roughly translated to 'i am
+                            dreams'. the art speaks for itself.
+                        </p>
+                    </div>
+                </article>
+            </main>
+
+            <header role="banner">
+                <nav role="navigation" aria-label="Main navigation">
+                    <a
+                        href="../index.html"
+                        class="nav-home"
+                        aria-label="Return to home page"
+                    >
+                        <span class="nav-text">de.</span>
+                    </a>
+                </nav>
+            </header>
+
+            <footer role="contentinfo">
+                <div class="footer-wrapper">
+                    <nav class="social-nav" aria-label="Social media links">
+                        <a
+                            href="https://github.com/somniasum"
+                            class="social-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Visit GitHub profile"
+                        >
+                            <i
+                                class="fa-brands fa-github"
+                                aria-hidden="true"
+                            ></i>
+                        </a>
+                        <a
+                            href="https://instagram.com/somniasum"
+                            class="social-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Visit Instagram profile"
+                        >
+                            <i
+                                class="fa-brands fa-instagram"
+                                aria-hidden="true"
+                            ></i>
+                        </a>
+                        <a
+                            href="https://steamcommunity.com/id/somniasum/"
+                            class="social-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Visit Steam profile"
+                        >
+                            <i
+                                class="fa-brands fa-steam"
+                                aria-hidden="true"
+                            ></i>
+                        </a>
+                        <a
+                            href="mailto:somniasum@gmail.com"
+                            class="social-link"
+                            aria-label="Send email"
+                        >
+                            <i
+                                class="fa-regular fa-envelope"
+                                aria-hidden="true"
+                            ></i>
+                        </a>
+                    </nav>
+                    <p class="copyright">
+                        <small
+                            >© <span id="year">2025</span> somniasum. All
+                            rights reserved.</small
+                        >
                     </p>
                 </div>
-            </section>
-        </main>
+            </footer>
+        </div>
 
-        <footer>
-            <div class="footerContainer">
-                <div class="socials">
-                    <a href="https://github.com/somniasum"
-                        ><i class="fa-brands fa-github"></i
-                    ></a>
-                    <a href="https://instagram.com/somniasum"
-                        ><i class="fa-brands fa-instagram"></i
-                    ></a>
-                    <a href="https://steamcommunity.com/id/somniasum/">
-                        <i class="fa-brands fa-steam"></i>
-                    </a>
-
-                    <a href="mailto:somniasum@gmail.com"
-                        ><i class="fa-regular fa-envelope"></i
-                    ></a>
-                </div>
-            </div>
-        </footer>
+        <script>
+            document.getElementById("year").textContent =
+                new Date().getFullYear();
+        </script>
     </body>
 </html>
