@@ -23,9 +23,9 @@
     --font-display: "Playfair Display", Georgia, serif;
     --font-mono: "IBM Plex Mono", "Courier New", monospace;
     --text-xs: clamp(0.75rem, 1.5vw, 0.875rem);
-    --text-base: clamp(0.55rem, 2.2vw, 0.5rem);
+    --text-base: clamp(0.55rem, 2.2vw, 0.3rem);
     --text-lg: clamp(1.25rem, 3vw, 1.75rem);
-    --text-xl: clamp(1.5rem, 4vw, 3.25rem);
+    --text-xl: clamp(3.5rem, 4vw, 3.25rem);
 
     /* Effects */
     --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
