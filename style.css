@@ -64,31 +64,6 @@ main {
     position: relative;
 }
 
-/* Hover Effects */
-.logo-link:hover .logo-text {
-    opacity: 0.7;
-    transform: translateY(-2px);
-    text-shadow: var(--shadow-glow);
-}
-
-/* Focus State */
-.logo-link:focus-visible {
-    outline: 2px solid rgba(255, 255, 255, 0.6);
-    outline-offset: 12px;
-    border-radius: 4px;
-}
-
-/* Selection */
-::selection {
-    background-color: var(--clr-text);
-    color: var(--clr-bg);
-}
-
-::-moz-selection {
-    background-color: var(--clr-text);
-    color: var(--clr-bg);
-}
-
 /* Responsive Typography */
 @media (max-width: 768px) {
     :root {
