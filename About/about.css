@@ -70,7 +70,7 @@ body {
   flex-direction: column;
 }
 
-/* Header Styles */
+/* Header */
 header {
   position: absolute;
   top: 0;
@@ -137,18 +137,6 @@ main {
   width: 100%;
   max-width: var(--max-width);
   animation: fadeInUp 0.8s ease-out;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .about-content {
@@ -293,7 +281,7 @@ footer {
   }
 }
 
-/* Accessibility & Performance */
+/* Performance */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
