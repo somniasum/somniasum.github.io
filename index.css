@@ -64,7 +64,7 @@ main {
   position: relative;
 }
 
-/* Responsive Typography */
+/* Responsive */
 @media (max-width: 768px) {
   :root {
     --text-display: clamp(1.5rem, 8vw, 2.25rem);
