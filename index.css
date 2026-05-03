@@ -98,31 +98,11 @@ header nav {
     color: var(--clr-text);
     text-decoration: none;
     font-size: var(--text-xl);
-    font-weight: 600;
+    font-weight: 800;
     letter-spacing: 0.02em;
-    transition: var(--transition);
     display: inline-block;
     position: relative;
-    pointer-events: auto;
-}
-
-.nav-home::after {
-    content: "";
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 2px;
-}
-
-.nav-home:hover {
-    opacity: 0.5;
-}
-
-.nav-home:focus-visible {
-    outline: 2px solid var(--clr-text-dim);
-    outline-offset: 8px;
-    border-radius: 2px;
+    pointer-events: none;
 }
 
 /* Main */
