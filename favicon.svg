@@ -5,5 +5,5 @@
       text { font-family: 'Fantasque Sans Mono', 'Fira Code', monospace; }
     </style>
   </defs>
-  <text x="50" y="150" font-size="150" fill="white" font-weight="600">n*</text>
+  <text x="50" y="150" font-size="150" fill="white" font-weight="600">zn</text>
 </svg>
