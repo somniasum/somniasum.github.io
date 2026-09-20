@@ -29,7 +29,7 @@
         />
         <link rel="icon" href="favicon.svg" type="image/svg+xml" />
         <style>
-/* Self-hosted fonts: same origin, preloaded from <head>, only the weights the page renders. */
+/* render fonts from the fonts folder */
 @font-face {
     font-family: "Playfair Display";
     font-style: normal;
@@ -54,7 +54,7 @@
     src: url("fonts/ibm-plex-mono-500.woff2") format("woff2");
 }
 
-/* Tokens (dark by default, light follows the device setting) */
+/* dark theme by default */
 :root {
     color-scheme: light dark;
 
@@ -112,7 +112,7 @@ body {
 .content-container {
     position: relative;
     height: 100vh;
-    height: 100dvh; /* tracks the visible height on mobile so the footer isn't hidden by browser bars */
+    height: 100dvh; /* check footer height */
     display: flex;
     flex-direction: column;
 }
@@ -151,7 +151,7 @@ main {
     overflow-y: auto;
 }
 
-/* margin: auto centers the block and, unlike align-items: center, never clips the top when it overflows */
+/* margin checks */
 .about-wrapper {
     width: 100%;
     max-width: var(--max-width);
@@ -207,7 +207,7 @@ footer {
     fill: currentColor;
 }
 
-/* hover-capable devices only, so touch screens don't keep a link dimmed after a tap */
+/* no link dim */
 @media (hover: hover) {
     .social-link:hover {
         opacity: 0.5;
@@ -223,7 +223,7 @@ footer {
     color: var(--clr-text-muted);
 }
 
-/* Responsive: spacing steps down, icons get bigger touch targets */
+/* responsive sizing on icons */
 @media (max-width: 768px) {
     :root {
         --space-lg: 1.5rem;
