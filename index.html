@@ -2,24 +2,277 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="somniasum description" />
         <meta name="author" content="somniasum" />
-        <title>somniasum</title>
-        <link rel="stylesheet" href="index.css" />
+        <title>som.nia.sum</title>
         <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            rel="preload"
+            href="fonts/playfair-display-600.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+        <link
+            rel="preload"
+            href="fonts/ibm-plex-mono-400.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+        <link
+            rel="preload"
+            href="fonts/ibm-plex-mono-500.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+        <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+        <style>
+/* Self-hosted fonts: same origin, preloaded from <head>, only the weights the page renders. */
+@font-face {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("fonts/playfair-display-600.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "IBM Plex Mono";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("fonts/ibm-plex-mono-400.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "IBM Plex Mono";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("fonts/ibm-plex-mono-500.woff2") format("woff2");
+}
+
+/* Tokens (dark by default, light follows the device setting) */
+:root {
+    color-scheme: light dark;
+
+    --clr-bg: #000;
+    --clr-text: #fff;
+    --clr-text-dim: rgba(255, 255, 255, 0.75);
+    --clr-text-muted: rgba(255, 255, 255, 0.4);
+    --clr-overlay: rgba(0, 0, 0, 0.85);
+
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+
+    --font-display: "Playfair Display", Georgia, serif;
+    --font-mono: "IBM Plex Mono", "Courier New", monospace;
+    --text-xs: clamp(0.55rem, 1.5vw, 0.75rem);
+    --text-base: clamp(0.65rem, 2.2vw, 0.9rem);
+
+    --max-width: 52rem;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --clr-bg: #fff;
+        --clr-text: #000;
+        --clr-text-dim: rgba(0, 0, 0, 0.75);
+        --clr-text-muted: rgba(0, 0, 0, 0.5);
+        --clr-overlay: rgba(255, 255, 255, 0.85);
+    }
+}
+
+@media (prefers-contrast: high) {
+    :root {
+        --clr-text-dim: var(--clr-text);
+    }
+}
+
+/* Base */
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--clr-bg);
+    color: var(--clr-text);
+    font-family: var(--font-display);
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.content-container {
+    position: relative;
+    height: 100vh;
+    height: 100dvh; /* tracks the visible height on mobile so the footer isn't hidden by browser bars */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    position: absolute;
+    inset: 0 0 auto;
+    padding: var(--space-lg);
+    background: linear-gradient(
+        180deg,
+        var(--clr-bg) 0%,
+        var(--clr-overlay) 60%,
+        transparent 100%
+    );
+    pointer-events: none;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-home {
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+/* Main */
+main {
+    flex: 1;
+    display: flex;
+    padding: var(--space-lg);
+    overflow-y: auto;
+}
+
+/* margin: auto centers the block and, unlike align-items: center, never clips the top when it overflows */
+.about-wrapper {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: auto;
+}
+
+.about-content {
+    padding: var(--space-md);
+    text-align: center;
+}
+
+.bio-text {
+    font-family: var(--font-mono);
+    font-size: var(--text-base);
+    line-height: 2;
+    letter-spacing: 0.03em;
+    color: var(--clr-text-dim);
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    inset: auto 0 0;
+    padding: var(--space-lg);
+    text-align: center;
+}
+
+.social-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-md);
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.7rem;
+    height: 1.7rem;
+    color: var(--clr-text);
+    font-size: 2rem;
+    text-decoration: none;
+    transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link svg {
+    flex: none;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+}
+
+/* hover-capable devices only, so touch screens don't keep a link dimmed after a tap */
+@media (hover: hover) {
+    .social-link:hover {
+        opacity: 0.5;
+    }
+}
+
+.copyright {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--clr-text-muted);
+}
+
+/* Responsive: spacing steps down, icons get bigger touch targets */
+@media (max-width: 768px) {
+    :root {
+        --space-lg: 1.5rem;
+    }
+
+    .social-link {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --space-md: 1rem;
+        --space-lg: 1rem;
+    }
+
+    .social-link {
+        width: 2.75rem;
+        height: 2.75rem;
+        font-size: 1.5rem;
+    }
+}
+
+/* Selection & keyboard focus */
+::selection {
+    background-color: var(--clr-text);
+    color: var(--clr-bg);
+}
+
+:focus-visible {
+    outline: 2px solid var(--clr-text-dim);
+    outline-offset: 4px;
+}
+        </style>
     </head>
 
     <body>
-        <div class="grain-overlay"></div>
         <div class="content-container">
+
+            <header role="banner">
+                <nav role="navigation" aria-label="main navigation">
+                    <a class="nav-home">
+                        <span class="nav-text">somniasum</span>
+                    </a>
+                </nav>
+            </header>
+
             <main role="main">
                 <article class="about-wrapper">
                     <div class="about-content">
@@ -27,18 +280,12 @@
                             nelo [ zhad ] is a binary magus, cryptic by rapport,
                             autodidact; materialist evidentialist anti-theist
                             and an artifex of the physical sciences. <br><br>
-                                <i>ars est celare artem.</i>
+                            617273206573742063656C61726520617274656D
                         </p>
                     </div>
                 </article>
             </main>
-            <header role="banner">
-                <nav role="navigation" aria-label="main navigation">
-                    <a class="nav-home">
-                        <span class="nav-text">som nia sum</span>
-                    </a>
-                </nav>
-            </header>
+
             <footer role="contentinfo">
                 <div class="footer-wrapper">
                     <nav class="social-nav" aria-label="social media links">
@@ -49,10 +296,9 @@
                             rel="noopener noreferrer"
                             aria-label="github"
                         >
-                            <i
-                                class="fa-brands fa-github"
-                                aria-hidden="true"
-                            ></i>
+                            <svg viewBox="0 0 512 512" aria-hidden="true" focusable="false">
+                                <path d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5l0 52C323 491.5 335.5 500 350.5 494 441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5l0-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21z" />
+                            </svg>
                         </a>
 
                         <a
@@ -62,10 +308,9 @@
                             rel="noopener noreferrer"
                             aria-label="signal"
                         >
-                            <i
-                                class="fa-brands fa-signal-messenger"
-                                aria-hidden="true"
-                            ></i>
+                            <svg viewBox="0 0 512 512" aria-hidden="true" focusable="false">
+                                <path d="M256 0c-13.3 0-26.3 1-39.1 3l3.7 23.7C232.1 24.9 244 24 256 24s23.9 .9 35.4 2.7L295.1 3C282.3 1 269.3 0 256 0zm60.8 7.3l-5.7 23.3c23.4 5.7 45.4 14.9 65.4 27.1l12.5-20.5c-22.1-13.4-46.4-23.6-72.2-29.9zm76.4 61.6c19.1 14 36 30.9 50.1 50.1l19.4-14.2C447 83.6 428.4 65 407.3 49.5L393.1 68.8zm81.7 54.2l-20.5 12.5c12.2 20 21.4 42 27.1 65.4l23.3-5.7c-6.3-25.8-16.5-50.1-29.9-72.2zm10.5 97.5c1.8 11.5 2.7 23.4 2.7 35.4s-.9 23.9-2.7 35.4l23.7 3.7c1.9-12.7 3-25.8 3-39.1s-1-26.3-3-39.1l-23.7 3.7zm-31 155.9l20.5 12.5c13.4-22.1 23.6-46.4 29.9-72.2l-23.3-5.7c-5.7 23.4-14.9 45.4-27.1 65.4zm8.2 30.8l-19.4-14.2c-14 19.1-30.9 36-50.1 50.1l14.2 19.4c21.1-15.5 39.8-34.1 55.2-55.2zm-86.1 47c-20 12.2-42 21.4-65.4 27.1l5.7 23.3c25.8-6.3 50.1-16.5 72.2-29.9l-12.5-20.5zM295.1 509l-3.7-23.7C279.9 487.1 268 488 256 488s-23.9-.9-35.4-2.7L216.9 509c12.7 1.9 25.8 3 39.1 3s26.3-1 39.1-3zm-94.1-27.6c-17.6-4.3-34.4-10.6-50.1-18.6l-7.8-4-32.8 7.7 5.5 23.4 24.3-5.7c17.4 8.9 35.9 15.8 55.3 20.5l5.7-23.3zM95.4 494.6L90 471.3 48.3 481c-10.4 2.4-19.7-6.9-17.3-17.3l9.7-41.6-23.4-5.5-9.7 41.6C1.2 486 26 510.8 53.8 504.4l41.6-9.7zm-50-92.9l7.7-32.8-4-7.8c-8-15.7-14.3-32.5-18.6-50.1L7.3 316.7C12 336.1 18.9 354.7 27.7 372l-5.7 24.3 23.4 5.5zM3 295.1l23.7-3.7C24.9 279.9 24 268 24 256s.9-23.9 2.7-35.4L3 216.9C1 229.7 0 242.7 0 256s1 26.3 3 39.1zm27.6-94.1c5.7-23.4 14.9-45.4 27.1-65.4L37.2 123.1c-13.4 22.1-23.6 46.4-29.9 72.2l23.3 5.7zm18.9-96.2l19.4 14.2c14-19.1 30.9-36 50.1-50.1L104.7 49.5C83.6 65 65 83.6 49.5 104.7zm86.1-47c20-12.2 42-21.4 65.4-27.1L195.2 7.3c-25.8 6.3-50.1 16.5-72.2 29.9l12.5 20.5zM256 464c114.9 0 208-93.1 208-208S370.9 48 256 48 48 141.1 48 256c0 36.4 9.4 70.7 25.8 100.5 1.6 2.9 2.1 6.2 1.4 9.4l-21.6 92.5 92.5-21.6c3.2-.7 6.5-.2 9.4 1.4 29.8 16.5 64 25.8 100.5 25.8z" />
+                            </svg>
                         </a>
 
                         <a
@@ -73,10 +318,9 @@
                             class="social-link"
                             aria-label="email"
                         >
-                            <i
-                                class="fa-regular fa-envelope"
-                                aria-hidden="true"
-                            ></i>
+                            <svg viewBox="0 0 512 512" aria-hidden="true" focusable="false">
+                                <path d="M61.4 64C27.5 64 0 91.5 0 125.4 0 126.3 0 127.1 .1 128L0 128 0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-256-.1 0c0-.9 .1-1.7 .1-2.6 0-33.9-27.5-61.4-61.4-61.4L61.4 64zM464 192.3L464 384c0 8.8-7.2 16-16 16L64 400c-8.8 0-16-7.2-16-16l0-191.7 154.8 117.4c31.4 23.9 74.9 23.9 106.4 0L464 192.3zM48 125.4C48 118 54 112 61.4 112l389.2 0c7.4 0 13.4 6 13.4 13.4 0 4.2-2 8.2-5.3 10.7L280.2 271.5c-14.3 10.8-34.1 10.8-48.4 0L53.3 136.1c-3.3-2.5-5.3-6.5-5.3-10.7z" />
+                            </svg>
                         </a>
                     </nav>
                     <p class="copyright">
@@ -87,10 +331,13 @@
                     </p>
                 </div>
             </footer>
+
         </div>
+
         <script>
             document.getElementById("year").textContent =
                 new Date().getFullYear();
         </script>
+
     </body>
 </html>
